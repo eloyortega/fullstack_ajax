@@ -1,0 +1,41 @@
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+#profile{
+	margin: 0px auto;
+	text-align: center;
+}
+
+.person{
+	width:300px;
+	padding:5px 20px 20px 20px;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	background-color: #000;
+	color:#fff;
+	border:1px #333 solid;
+	border-radius:5px;
+	margin:10px;
+	min-height:400px;
+}
+
+.person .profileImage{
+	text-align: center;
+}
+
+.person img{
+	width: 200px;
+	border-radius:50%;
+	border:2px #fff solid;
+}
+
+.person h5{
+	margin:10px 0px 0px 0px;
+}
+
+.person h5+p{
+	margin:0px;
+}
