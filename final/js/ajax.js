@@ -6,6 +6,7 @@ $('document').ready(function () {
 			url: 'ppl.json',
 			type: 'get',
 			dataType: 'JSON',
+			cache: false,
 			error: function (data) {
 				console.log(data);
 			},
