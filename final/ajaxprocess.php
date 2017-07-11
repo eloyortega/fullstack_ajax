@@ -3,7 +3,7 @@
 $n = $_POST['name'];
 $g = $_POST['gender'];
 
-//retrieve the Jason file and converted it into php array
+//retrieve the Json file and converted it into php array
 $jr = file_get_contents('ppl.json');
 $j = json_decode($jr, true);
 
