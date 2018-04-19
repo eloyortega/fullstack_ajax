@@ -24,9 +24,14 @@ $('document').ready(function () {
 					var gender = value.gender;
 
 					$('#profile').append('<div class="person" id="p' + id + '"></div>');
-					$('#p' + id).append('<h3>' + id + '</h3>');
-					$('#p' + id).append('<div class="profileImage"><img src="img/' + id + '.jpg"></div>');
-					$('#p' + id).append('<h4>Name: ' + name + '</h4><p>Gender: ' + gender + '<br></p>');
+					$('#p' + id).append(`
+						<h3> ${id} </h3>
+						<div class="profileImage">
+							<img src="img/${id}.jpg">
+						</div>
+						<h4>Name: ${name}</h4>
+						<p>Gender: ${gender}</p>
+					`);
 				});
 			}
 		});
@@ -45,13 +50,13 @@ $('document').ready(function () {
 			url: "ajaxprocess.php",
 			type: "POST",
 			data: formData,
+			cache: false,
+			contentType: false,
+			processData: false,
 			success: function(){
 				console.log('got here');
 				cardloading();
-			},
-			cache: false,
-			contentType: false,
-			processData: false
+			}
 		});
 		e.preventDefault();
 	});
