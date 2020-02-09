@@ -7,17 +7,11 @@ $('document').ready(function () {
 			type: 'get',
 			dataType: 'JSON',
 			cache: false,
-			error: function (data) {
-				console.log(data);
-			},
 			success: function (data) {
 				// upon successfully retrieving the json file loop through the data dynamically generate cards on the index page
 				$.each(data, function (index, value) {
-					console.log(Object.keys(value));
 					console.log(index);
 					console.log(value);
-
-
 					$('#profile').append(`
 						<div class="person" id="p${value.id}">
 							<h3> ${value.id} </h3>
@@ -31,7 +25,7 @@ $('document').ready(function () {
 				});
 			}
 		});
-	}
+	};
 
 // execute the function I just created on page load
 	cardloading();
@@ -41,16 +35,15 @@ $('document').ready(function () {
 // upon success rerun the function to dynamically generated the cards on the next page
 	$("form").submit(function (e) {
 		$('.person').remove();
-		var formData = new FormData($(this)[0]);
+		var fd = new FormData($(this)[0]);
 		$.ajax({
 			url: "ajaxprocess.php",
 			type: "POST",
-			data: formData,
+			data: fd,
 			cache: false,
 			contentType: false,
 			processData: false,
 			success: function(){
-				console.log('got here');
 				cardloading();
 			}
 		});

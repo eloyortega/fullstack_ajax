@@ -1,26 +1,17 @@
 <?php
-//Store data from my form into variables
-$n = $_POST['name'];
-$g = $_POST['gender'];
-
 //retrieve the Json file and converted it into php array
 $j = file_get_contents('ppl.json');
 $j = json_decode($j, true);
 
 //print_r ($j);
 
-$k = "object".$objectCount;
-
 //format the id
 $i = count($j);
-$i = ++$i;
+++$i;
 
 // insert my variables into an array stored in a variable called $add
-$add = array(
-	"id" => $i,
-	"name" => $n,
-	"gender" => $g
-);
+$add = $_POST;
+$add['id'] = $i;
 //print_r ($add);
 
 // append my new array into the json array
