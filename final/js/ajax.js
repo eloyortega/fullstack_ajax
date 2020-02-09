@@ -16,21 +16,17 @@ $('document').ready(function () {
 					console.log(Object.keys(value));
 					console.log(index);
 					console.log(value);
-					console.log(value.id);
-					console.log(value.name);
 
-					var id = value.id;
-					var name = value.name;
-					var gender = value.gender;
 
-					$('#profile').append('<div class="person" id="p' + id + '"></div>');
-					$('#p' + id).append(`
-						<h3> ${id} </h3>
-						<div class="profileImage">
-							<img src="img/${id}.jpg">
+					$('#profile').append(`
+						<div class="person" id="p${value.id}">
+							<h3> ${value.id} </h3>
+							<div class="profileImage">
+								<img src="img/${value.id}.jpg">
+							</div>
+							<h4>Name: ${value.name}</h4>
+							<p>Gender: ${value.gender}</p>
 						</div>
-						<h4>Name: ${name}</h4>
-						<p>Gender: ${gender}</p>
 					`);
 				});
 			}

@@ -1,77 +1,91 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Cache-Control" content="no-store" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
 	<title>Ajax Example</title>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/ajax.js"></script>
 	<style>
-		*{
+		* {
 			font-family: sans-serif;
 			box-sizing: border-box;
 		}
 
-		#profile{
+		#profile {
 			margin: 0px auto;
 			text-align: center;
 		}
 
-		.person{
-			width:300px;
-			padding:5px 20px 20px 20px;
+		.person {
+			width: 300px;
+			padding: 5px 20px 20px 20px;
 			display: inline-block;
 			text-align: left;
 			vertical-align: top;
 			background-color: #000;
-			color:#fff;
-			border:1px #333 solid;
-			border-radius:5px;
-			margin:10px;
-			min-height:400px;
+			color: #fff;
+			border: 1px #333 solid;
+			border-radius: 5px;
+			margin: 10px;
+			min-height: 400px;
 		}
 
-		.person .profileImage{
+		.person .profileImage {
 			text-align: center;
 		}
 
-		.person img{
+		.person img {
 			width: 200px;
-			border-radius:50%;
-			border:2px #fff solid;
+			border-radius: 50%;
+			border: 2px #fff solid;
 		}
 
-		.person h5{
-			margin:10px 0px 0px 0px;
+		.person h5 {
+			margin: 10px 0px 0px 0px;
 		}
 
-		.person h5+p{
-			margin:0px;
+		.person h5+p {
+			margin: 0px;
 		}
+
 	</style>
 </head>
+
 <body>
 
-<h2>Ajax Example</h2>
-<form method="post" enctype="multipart/form-data">
-<label>Name
-	<input type="text" name="name" required><br>
-</label>
-<br>
-<label>Photo
-	<input type="file" name="photo" required><br>
-</label>
-<p><b>Gender</b></p>
-<label><input type="radio" name="gender" value="Male" required> Male
-</label>
-<label><input type="radio" name="gender" value="Female" required> Female<br>
-</label>
-	<br>
-<input type="submit" name="submit" value="Submit" id="submit">
-</form>
+	<h2>Ajax Example</h2>
+	<form method="post" enctype="multipart/form-data">
+		<label>Name
+			<input type="text" name="name" required><br>
+		</label>
+		<br>
+		<label>Photo
+			<input type="file" name="photo" required><br>
+		</label>
+		<p><b>Gender</b></p>
+		<label><input type="radio" name="gender" value="Male" required> Male
+		</label>
+		<label><input type="radio" name="gender" value="Female" required> Female<br>
+		</label>
+		<br>
+		<input type="submit" name="submit" value="Submit" id="submit">
+	</form>
 	<div id="profile">
 		<h2>Profiles</h2>
+		<div class="person" id="p0">
+			<h3>0</h3>
+			<div class="profileImage">
+				<img src="img/1.jpg">
+			</div>
+			<h4>Name: Walter</h4>
+			<p>Gender: Male</p>
+		</div>
 	</div>
 </body>
+
 </html>
